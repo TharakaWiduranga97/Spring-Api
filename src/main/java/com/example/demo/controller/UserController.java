@@ -40,6 +40,16 @@ public class UserController {
       return  userService.deleteUser(userDTO);
 
     }
+    @GetMapping("/getUserByUserId/{userId}")
+    public UserDTO getUserByUserId(@PathVariable String userId) {
+        return userService.getUserByUserId(userId);
+
+    }
+    @GetMapping("/getUserByUserIdAndName/{userId}/{name}")
+    public UserDTO getUserByUserIdAndName(@PathVariable String userId,@PathVariable String name) {
+        return userService.getUserByUserIdAndName(userId,name);
+
+    }
 
 
 
